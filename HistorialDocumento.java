@@ -18,7 +18,7 @@ public class HistorialDocumento {
   
     public void retroceder() {
         if (historial.isEmpty()) {
-            System.out.println("\n[!] No hay documento anterior en el historial para retroceder.");
+            System.out.println("\nNo hay documento anterior en el historial para retroceder.");
             return;
         }
 
@@ -29,16 +29,16 @@ public class HistorialDocumento {
         
         if (!historial.isEmpty()) {
             Documento documentoActual = historial.peek();
-            System.out.println("[->] Ahora te encuentras en: " + documentoActual.getNombre() + " (" + documentoActual.getNombre() + ")");
+            System.out.println("Ahora te encuentras en: " + documentoActual.getNombre() + " (" + documentoActual.getNombre() + ")");
         } else {
-            System.out.println("[i] El historial ha quedado vacío. ");
+            System.out.println("El historial ha quedado vacío. ");
         }
     }
 
     
     public void verDocumentoActual() {
         if (historial.isEmpty()) {
-            System.out.println("\n[!] No estás en ningun documento actualmente.");
+            System.out.println("\nNo estás en ningun documento actualmente.");
         } else {
             Documento actual = historial.peek();
             System.out.println("\n[Documento Actual]");

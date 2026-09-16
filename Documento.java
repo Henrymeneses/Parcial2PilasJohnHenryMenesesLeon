@@ -1,16 +1,13 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Clase que representa el objeto PaginaWeb a ser manipulado en la Pila.
- */
+
 public class Documento {
     private String nombre;
     private String tipo;
     private String ruta;
     private String fechaApertura;
 
-    // Constructor que asigna la fecha y hora actual automáticamente
     
     public Documento(String nombre, String tipo, String ruta) {
         this.nombre = nombre;
@@ -19,7 +16,6 @@ public class Documento {
         this.fechaApertura = obtenerFechaYHoraActual();
     }
 
-    // Constructor sobrecargado en caso de querer asignar fecha manual
     public Documento(String nombre, String tipo, String ruta, String fechaApertura) {
         this.nombre = nombre;
         this.tipo = tipo;
@@ -33,7 +29,7 @@ public class Documento {
         return ahora.format(formato);
     }
 
-    // Getters y Setters
+   
     public String getNombre() {
         return nombre;
     }
@@ -67,7 +63,7 @@ public class Documento {
 
     @Override
     public String toString() {
-        return "Típo: " + tipo + " | Nombre: " + nombre + " | Ruta: " + ruta +  " | Fecha de apertura: " + fechaApertura;
+        return " | Nombre: " + nombre + "Típo: " + tipo +  " | Ruta: " + ruta +  " | Fecha de apertura: " + fechaApertura;
     }
 }
 
